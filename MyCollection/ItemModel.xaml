@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="MyCollection.ItemModel"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MyCollection"
+             mc:Ignorable="d" 
+             d:DesignHeight="120" d:DesignWidth="570">
+    <Grid>
+        <Image Name="imageItem" HorizontalAlignment="Left" Height="120" Width="154" Stretch="UniformToFill"/>
+        <TextBlock Name="itemText" Text="Coffie" FontFamily="Segoe UI Light" FontSize="30" TextWrapping="Wrap" Margin="159,0,150,0"/>
+        <TextBlock Name="WatchedText" HorizontalAlignment="Left" Margin="403,10,0,0" TextWrapping="Wrap" Text="Не просмотрено" VerticalAlignment="Top" Height="65" Width="157" FontFamily="Segoe UI Light" FontSize="20"/>
+        <TextBlock Name="dateText" HorizontalAlignment="Left" Margin="433,83,0,0" TextWrapping="Wrap" Text="25.08.19" VerticalAlignment="Top" FontFamily="Segoe UI Light" FontSize="20" Width="127"/>
+        <!--<StackPanel Orientation="Horizontal" Width="500" >
+            <Image Name="imageItem" Width="160"  Height="120" Stretch="Uniform"/>
+            <TextBlock Name="itemText" Text="Coffie" Width="270" FontFamily="Segoe UI Light" FontSize="30" TextWrapping="Wrap"/>
+            <TextBlock Name="dateText" Text="15.08.19" Width="140" FontFamily="Segoe UI Light" FontSize="25" HorizontalAlignment="Right" VerticalAlignment="Bottom"/>
+        </StackPanel>-->
+    </Grid>
+</UserControl>
