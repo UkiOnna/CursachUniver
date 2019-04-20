@@ -19,6 +19,10 @@
         <TextBox Name="searchName" HorizontalAlignment="Left" Height="44" Margin="37,10,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290" FontSize="16"/>
         <Button Content="Поиск" HorizontalAlignment="Left" Margin="381,22,0,0" VerticalAlignment="Top" Width="75" Click="SearchButtonClick"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="692,22,0,0" VerticalAlignment="Top" Width="75" Click="BackButtonClick"/>
+        <Button Content="Просмотернные" HorizontalAlignment="Left" Margin="599,109,0,0" VerticalAlignment="Top" Width="168" FontSize="14" Click="WatchedButtonClick"/>
+        <Button Content="Не просмотернные" HorizontalAlignment="Left" Margin="599,176,0,0" VerticalAlignment="Top" Width="168" FontSize="14" Click="NotWatchedButtonClick"/>
+        <Button Content="Сначала старые" HorizontalAlignment="Left" Margin="599,242,0,0" VerticalAlignment="Top" Width="168" Click="OldSortButtonClick"/>
+        <Button Content="Сначала новые" HorizontalAlignment="Left" Margin="599,303,0,0" VerticalAlignment="Top" Width="168" Click="NewSortButtonClick"/>
 
     </Grid>
 </Page>

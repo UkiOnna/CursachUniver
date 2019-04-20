@@ -88,5 +88,28 @@ namespace MyCollection
 
             }
         }
+
+        private void DeleteButtonClick(object sender, RoutedEventArgs e)
+        {
+            if (MessageBox.Show("Вы уверены что хотите удалить данный элемент коллекции?", "Не удаляй меня :(", MessageBoxButton.YesNo, MessageBoxImage.Warning) == MessageBoxResult.No)
+            {
+                
+            }
+            else
+            {
+                using (var context = new CollectionContext())
+                {
+                    for (int i = 0; i < context.Elements.Count(); i++)
+                    {
+                        if (context.Elements.ToList()[i].Id == id)
+                        {
+                            context.Elements.Remove(context.Elements.ToList()[i]);
+                        }
+                    }
+                    context.SaveChanges();
+                }
+                window.Content = new ListItemsPage(window);
+            }
+        }
     }
 }

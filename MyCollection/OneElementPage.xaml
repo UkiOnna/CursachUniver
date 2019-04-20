@@ -26,5 +26,6 @@
         </TextBlock>
         <Button Content="Редактировать" HorizontalAlignment="Left" Margin="445,364,0,0" VerticalAlignment="Top" Width="133" Click="RedactButtonClick"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="671,364,0,0" VerticalAlignment="Top" Width="75" Click="BackButtonClick"/>
+        <Button Content="Удалить" HorizontalAlignment="Left" Margin="269,364,0,0" VerticalAlignment="Top" Width="97" Click="DeleteButtonClick"/>
     </Grid>
 </Page>

@@ -36,6 +36,7 @@ namespace MyCollection
                     el.Name= context.Elements.ToList()[i].Name;
                     el.CreationDate= context.Elements.ToList()[i].CreationDate;
                     el.Image = context.Elements.ToList()[i].Image;
+                    el.IsWatched = context.Elements.ToList()[i].IsWatched;
                     elements.Add(el);
                 }
                 context.SaveChanges();
@@ -46,12 +47,12 @@ namespace MyCollection
         private void SearchButtonClick(object sender, RoutedEventArgs e)
         {
             bool iFound = false;
+            listItem.Items.Clear();
             for (int i = 0; i < elements.Count; i++)
             {
                 if (searchName.Text.ToLower() == elements[i].Name.ToLower())
                 {
                     iFound = true;
-                    listItem.Items.Clear();
                     listItem.Items.Add(new ItemModel(ImageConvert.LoadImage(elements[i].Image), elements[i].Name, elements[i].CreationDate.ToShortDateString(), elements[i].Id, elements[i].IsWatched));
                 }
             }
@@ -74,6 +75,54 @@ namespace MyCollection
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
             window.Content = new MainMenu(window);
+        }
+
+        private void WatchedButtonClick(object sender, RoutedEventArgs e)
+        {
+            listItem.Items.Clear();
+            for (int i = 0; i < elements.Count; i++)
+            {
+                if (elements[i].IsWatched)
+                {
+                   
+                    listItem.Items.Add(new ItemModel(ImageConvert.LoadImage(elements[i].Image), elements[i].Name, elements[i].CreationDate.ToShortDateString(), elements[i].Id, elements[i].IsWatched));
+                }
+            }
+
+
+
+        }
+
+        private void NotWatchedButtonClick(object sender, RoutedEventArgs e)
+        {
+            listItem.Items.Clear();
+            for (int i = 0; i < elements.Count; i++)
+            {
+                if (!elements[i].IsWatched)
+                {
+                    listItem.Items.Add(new ItemModel(ImageConvert.LoadImage(elements[i].Image), elements[i].Name, elements[i].CreationDate.ToShortDateString(), elements[i].Id, elements[i].IsWatched));
+                }
+            }
+        }
+
+        private void OldSortButtonClick(object sender, RoutedEventArgs e)
+        {
+            var sorted = elements.OrderBy(x => x.CreationDate).ToList();
+            listItem.Items.Clear();
+            for (int i = 0; i < sorted.Count; i++)
+            {
+                listItem.Items.Add(new ItemModel(ImageConvert.LoadImage(sorted[i].Image), sorted[i].Name, sorted[i].CreationDate.ToShortDateString(), sorted[i].Id, sorted[i].IsWatched));
+            }
+        }
+
+        private void NewSortButtonClick(object sender, RoutedEventArgs e)
+        {
+            var sorted = elements.OrderBy(x => x.CreationDate).ToList();
+            listItem.Items.Clear();
+            for (int i = sorted.Count-1; i >=0; i--)
+            {
+                listItem.Items.Add(new ItemModel(ImageConvert.LoadImage(sorted[i].Image), sorted[i].Name, sorted[i].CreationDate.ToShortDateString(), sorted[i].Id, sorted[i].IsWatched));
+            }
         }
     }
 }
