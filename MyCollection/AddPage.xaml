@@ -23,12 +23,12 @@
         <TextBlock HorizontalAlignment="Left" Margin="24,284,0,0" TextWrapping="Wrap" Text="Просмотрено:" VerticalAlignment="Top"/>
         <ComboBox Name="comboBoxIsWatched" HorizontalAlignment="Left" Margin="133,284,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBoxIsWatchedSelectionChanged"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,254,0,0" TextWrapping="Wrap" Text="Ссылка:" VerticalAlignment="Top"/>
-        <TextBox Name="LinkText" HorizontalAlignment="Left" Height="23" Margin="133,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="LinkText" HorizontalAlignment="Left" Height="23" Margin="133,254,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307"/>
         <TextBlock Name="RateText" HorizontalAlignment="Left" Margin="441,284,0,0" TextWrapping="Wrap" Text="Оценка:" VerticalAlignment="Top"/>
         <ComboBox Name="RateComboBox" HorizontalAlignment="Left" Margin="550,284,0,0" VerticalAlignment="Top" Width="120"/>
         <Button Content="Сохранить" HorizontalAlignment="Left" Margin="334,361,0,0" VerticalAlignment="Top" Width="106" Click="SaveElementClick"/>
         <TextBlock HorizontalAlignment="Left" Margin="24,330,0,0" TextWrapping="Wrap" Text="Название:" VerticalAlignment="Top" RenderTransformOrigin="0.53,0.482"/>
-        <TextBox Name="nameText" HorizontalAlignment="Left" Height="29" Margin="133,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="nameText" HorizontalAlignment="Left" Height="29" Margin="133,330,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="307"/>
         <Button Content="Назад" HorizontalAlignment="Left" Margin="24,34,0,0" VerticalAlignment="Top" Width="75" Click="BackButtonClick"/>
     </Grid>
 </Page>
